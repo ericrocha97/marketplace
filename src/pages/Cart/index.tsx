@@ -29,7 +29,7 @@ import EmptyCart from '../../components/EmptyCart';
 export default function Cart() {
   const [products, setProducts] = useState<ProductsCartProps[]>([]);
 
-  /*useEffect(()=>{
+  useEffect(()=>{
     setProducts([{
       id: "1",
       title: "Assinatura Trimestral",
@@ -51,7 +51,7 @@ export default function Cart() {
       quantity: 5,
       price: 540
     }])
-  },[])*/
+  },[])
 
   const cartSize = useMemo(() => {
     return products.length || 0;

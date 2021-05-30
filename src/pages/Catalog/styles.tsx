@@ -20,7 +20,9 @@ export const ProductList = styled(FlatList as new () => FlatList<ProductsCatalog
   numColumns: 1,
 })`
   flex: 1;
-  padding: 40px 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 60px;
 `;
 
 export const Product = styled.View`
