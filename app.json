@@ -26,6 +26,9 @@
       },
       "package": "dev.ericrocha.marketplace"
     },
+    "androidNavigationBar": {
+      "backgroundColor": "#e83f5b"
+    },
     "web": {
       "favicon": "./assets/favicon.png"
     }
