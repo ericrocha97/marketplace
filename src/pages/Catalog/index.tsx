@@ -13,14 +13,32 @@ import {
   ProductTitle
 } from './styles'
 import { Feather } from '@expo/vector-icons'
+import { useDispatch } from 'react-redux';
 
-import {ProductsCatalogProps} from '../../interfaces/ProductsInterface';
+import * as CartActions from '../../store/modules/cart/actions';
+
+import {ProductsCatalogProps} from '../../types/ProductsInterface';
 import formatValue from '../../utils/formatValue';
 
 import FloatingCart from '../../components/FloatingCart';
+import api from '../../services/api';
 
 export default function Catalog() {
+  const dispatch = useDispatch();
   const [products, setProducts] = useState<ProductsCatalogProps[]>([]);
+
+  useEffect(() => {
+    async function loadProducts() {
+      const { data } = await api.get('/products')
+
+      setProducts(data)
+    }
+    loadProducts()
+  },[])
+
+  function handleAddToCart(id: string) {
+    dispatch(CartActions.addToCartRequest(id))
+  }
 
   return(
     <Container>
@@ -41,7 +59,7 @@ export default function Catalog() {
               <ProductPrice>
                 {formatValue(item.price)}
               </ProductPrice>
-              <ProductButton onPress={() => {}}>
+              <ProductButton onPress={() => handleAddToCart(item.id)}>
                 <ProductButtonText>
                   Adicionar
                 </ProductButtonText>

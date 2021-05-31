@@ -9,6 +9,7 @@ export interface ProductsCartProps {
   id: string;
   title: string;
   image_url: string;
-  quantity: number;
+  amount: number;
   price: number;
+  priceFormatted: string;
 }

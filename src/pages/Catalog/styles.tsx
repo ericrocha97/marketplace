@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 
-import {ProductsCatalogProps} from '../../interfaces/ProductsInterface';
+import {ProductsCatalogProps} from '../../types/ProductsInterface';
 
 
 export const Container = styled.SafeAreaView`

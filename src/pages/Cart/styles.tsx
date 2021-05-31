@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 
-import {ProductsCartProps} from '../../interfaces/ProductsInterface';
+import {ProductsCartProps} from '../../types/ProductsInterface';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
