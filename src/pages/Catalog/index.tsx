@@ -19,29 +19,8 @@ import formatValue from '../../utils/formatValue';
 
 import FloatingCart from '../../components/FloatingCart';
 
-export default function App() {
+export default function Catalog() {
   const [products, setProducts] = useState<ProductsCatalogProps[]>([]);
-  
-  useEffect(()=>{
-    setProducts([{
-      id: "1",
-      title: "Assinatura Trimestral",
-      image_url: "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png",
-      price: 150
-    },
-    {
-      id: "2",
-      title: "Assinatura Anual",
-      image_url: "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/annual_subscription_qyolci.png",
-      price: 540
-    },
-    {
-      id: "3",
-      title: "Assinatura Anual",
-      image_url: "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/annual_subscription_qyolci.png",
-      price: 540
-    }])
-  },[])
 
   return(
     <Container>

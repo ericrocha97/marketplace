@@ -29,30 +29,6 @@ import EmptyCart from '../../components/EmptyCart';
 export default function Cart() {
   const [products, setProducts] = useState<ProductsCartProps[]>([]);
 
-  useEffect(()=>{
-    setProducts([{
-      id: "1",
-      title: "Assinatura Trimestral",
-      image_url: "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png",
-      quantity: 1,
-      price: 150
-    },
-    {
-      id: "2",
-      title: "Assinatura Anual",
-      image_url: "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/annual_subscription_qyolci.png",
-      quantity: 2,
-      price: 540
-    },
-    {
-      id: "3",
-      title: "Assinatura Anual",
-      image_url: "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/annual_subscription_qyolci.png",
-      quantity: 5,
-      price: 540
-    }])
-  },[])
-
   const cartSize = useMemo(() => {
     return products.length || 0;
   },[products])
